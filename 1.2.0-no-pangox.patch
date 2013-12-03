@@ -1,0 +1,19 @@
+--- origsrc/gtkglext-1.2.0/configure.in	2006-02-04 21:17:19.000000000 -0600
++++ src/gtkglext-1.2.0/configure.in	2012-09-19 16:18:12.065456300 -0500
+@@ -349,7 +349,6 @@ PKG_CHECK_MODULES([BASE_DEPENDENCIES], [
+ gtk_pkg >= gtk_required_version \
+ gdk_pkg >= gdk_required_version \
+ pango_pkg >= pango_required_version \
+-pangox_pkg >= pangox_required_version \
+ gmodule_pkg >= gmodule_required_version \
+ ])
+ 
+@@ -794,7 +793,7 @@ LIBS="$save_LIBS"
+ # CFLAGS and LIBS
+ ##################################################
+ 
+-GDKGLEXT_PACKAGES="gdk_pkg pango_pkg pangox_pkg gmodule_pkg"
++GDKGLEXT_PACKAGES="gdk_pkg pango_pkg gmodule_pkg"
+ GDKGLEXT_EXTRA_CFLAGS="$GL_CFLAGS $GDKGLEXT_WIN_CFLAGS"
+ GDKGLEXT_EXTRA_LIBS="$GL_LIBS $GDKGLEXT_WIN_LIBS"
+ GDKGLEXT_DEP_CFLAGS="$GDKGLEXT_EXTRA_CFLAGS `$PKG_CONFIG --cflags $GDKGLEXT_PACKAGES`"

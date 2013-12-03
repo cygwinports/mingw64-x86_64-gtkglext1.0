@@ -1,0 +1,22 @@
+--- origsrc/gtkglext-1.2.0/gdk/Makefile.am	2012-09-19 16:09:12.490594400 -0500
++++ src/gtkglext-1.2.0/gdk/Makefile.am	2012-09-19 16:23:12.909663600 -0500
+@@ -19,7 +19,7 @@ gdkglext_def = gdkglext.def
+ else
+ gdkglext_def = gdkglext-gtk20.def
+ endif
+-gdkglext_win32_symbols = -export-symbols $(gdkglext_def)
++gdkglext_win32_symbols = -export-symbols $(srcdir)/$(gdkglext_def)
+ endif
+ 
+ if MS_LIB_AVAILABLE
+--- origsrc/gtkglext-1.2.0/gtk/Makefile.am	2012-09-19 16:09:12.494594700 -0500
++++ src/gtkglext-1.2.0/gtk/Makefile.am	2012-09-19 16:23:23.497269200 -0500
+@@ -11,7 +11,7 @@ endif
+ 
+ if OS_WIN32
+ gtkglext_def = gtkglext.def
+-gtkglext_win32_symbols = -export-symbols $(gtkglext_def)
++gtkglext_win32_symbols = -export-symbols $(srcdir)/$(gtkglext_def)
+ endif
+ 
+ if MS_LIB_AVAILABLE

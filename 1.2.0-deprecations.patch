@@ -1,0 +1,54 @@
+--- origsrc/gtkglext-1.2.0/examples/Makefile.am	2003-09-09 04:50:04.000000000 -0500
++++ src/gtkglext-1.2.0/examples/Makefile.am	2008-12-09 22:00:10.034250000 -0600
+@@ -18,10 +18,7 @@
+ 	-I$(top_builddir)/gtk		\
+ 	$(GTKGLEXT_DEBUG_FLAGS)		\
+ 	$(EXAMPLES_DEP_CFLAGS)		\
+-	-DG_DISABLE_DEPRECATED		\
+-	-DGDK_DISABLE_DEPRECATED	\
+-	-DGDK_PIXBUF_DISABLE_DEPRECATED	\
+-	-DGTK_DISABLE_DEPRECATED
++	$(NULL)
+ 
+ DEPS = \
+ 	$(top_builddir)/gdk/$(gdkglext_targetlib)	\
+--- origsrc/gtkglext-1.2.0/gdk/Makefile.am	2003-08-15 04:10:38.000000000 -0500
++++ src/gtkglext-1.2.0/gdk/Makefile.am	2008-12-09 23:23:59.440500000 -0600
+@@ -44,9 +44,7 @@
+ 	-I$(top_srcdir)			\
+ 	$(GTKGLEXT_DEBUG_FLAGS)		\
+ 	$(GDKGLEXT_DEP_CFLAGS)		\
+-	-DG_DISABLE_DEPRECATED		\
+-	-DGDK_DISABLE_DEPRECATED	\
+-	-DGDK_PIXBUF_DISABLE_DEPRECATED
++	$(NULL)
+ 
+ common_ldflags = \
+ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) 	\
+--- origsrc/gtkglext-1.2.0/gdk/x11/Makefile.am	2003-05-07 13:18:42.000000000 -0500
++++ src/gtkglext-1.2.0/gdk/x11/Makefile.am	2008-12-09 23:24:19.815500000 -0600
+@@ -11,9 +11,7 @@
+ 	$(GTKGLEXT_DEBUG_FLAGS)		\
+ 	$(GDKGLEXT_DEP_CFLAGS)		\
+         $(GDKGLEXT_WIN_EXTRA_DEFS)	\
+-	-DG_DISABLE_DEPRECATED		\
+-	-DGDK_DISABLE_DEPRECATED	\
+-	-DGDK_PIXBUF_DISABLE_DEPRECATED
++	$(NULL)
+ 
+ LDADDS = \
+ 	$(GDKGLEXT_DEP_LIBS)
+--- origsrc/gtkglext-1.2.0/gtk/Makefile.am	2003-05-09 08:55:05.000000000 -0500
++++ src/gtkglext-1.2.0/gtk/Makefile.am	2008-12-09 23:24:32.362375000 -0600
+@@ -37,10 +37,7 @@
+ 	-I$(top_builddir)/gdk		\
+ 	$(GTKGLEXT_DEBUG_FLAGS)		\
+ 	$(GTKGLEXT_DEP_CFLAGS)		\
+-	-DG_DISABLE_DEPRECATED		\
+-	-DGDK_DISABLE_DEPRECATED	\
+-	-DGDK_PIXBUF_DISABLE_DEPRECATED	\
+-	-DGTK_DISABLE_DEPRECATED
++	$(NULL)
+ 
+ common_ldflags = \
+ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) 	\
